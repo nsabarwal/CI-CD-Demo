@@ -9,11 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var greetingLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction private func actionHello(_ sender: UIButton) {
+        greetingLabel.text = "Hello \(nameTextField.text ?? "")"
+    }
 }
 
